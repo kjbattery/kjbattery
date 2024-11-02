@@ -6,11 +6,49 @@ body {
     color: #333;
 }
 
+/* Gaya Header */
 header {
+    position: relative;
     text-align: center;
     padding: 2rem;
     background-color: #007bff;
     color: #fff;
+    overflow: hidden;
+    transition: background-color 0.3s ease; /* Transisi untuk efek animasi */
+}
+
+/* Logo Container */
+.logo-container {
+    display: inline-block;
+    position: relative;
+}
+
+/* Gaya Logo Default */
+.logo {
+    width: 80px; /* Ukuran logo untuk desktop */
+    opacity: 0.3; /* Opasitas rendah */
+    background-color: rgba(0, 0, 255, 0.2); /* Kotak biru transparan */
+    border-radius: 8px;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* Efek Zoom pada Logo saat di-scroll */
+.scrolled-header .logo {
+    transform: scale(1.1); /* Perbesar logo saat di-scroll */
+}
+
+/* Animasi Header saat di-scroll */
+.scrolled-header {
+    background-color: #0056b3; /* Warna lebih gelap saat di-scroll */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ukuran logo lebih kecil untuk layar ponsel */
+@media (max-width: 600px) {
+    .logo {
+        width: 60px; /* Sesuaikan untuk layar HP */
+    }
 }
 
 .service-card {
@@ -43,6 +81,31 @@ header {
 
 .service-card h2 {
     color: #007bff;
+}
+
+/* Bagian Kontak */
+.contact-info {
+    background-color: #f1f4ff; /* Warna latar cerah */
+    color: #333;
+    padding: 2rem;
+    text-align: center;
+    border-top: 4px solid #007bff; /* Garis biru atas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi */
+    border-radius: 8px 8px 0 0;
+}
+
+/* Judul Kontak */
+.contact-info h2 {
+    color: #0056b3;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Efek Hover */
+.contact-info:hover {
+    transform: translateY(-5px); /* Animasi geser sedikit ke atas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar */
 }
 
 footer {
